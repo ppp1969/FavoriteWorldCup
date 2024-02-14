@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/imageButtondown"
+        android:layout_width="400dp"
+        android:layout_height="260dp"
+        android:layout_marginBottom="4dp"
+        android:contentDescription="@string/_1"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="ImageContrastCheck,MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButtonup"
+        android:layout_width="400dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="40dp"
+        android:contentDescription="@string/_2"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar1"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/Stage"
+        android:layout_width="400dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/textview"
+        android:layout_marginLeft="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="400dp"
+        android:layout_height="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:ignore="UnknownId"
+        android:max="100"
+        />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VS"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageButtonup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtondown" />
+
+    <ImageButton
+        android:id="@+id/playButtonTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="180dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintStart_toStartOf="@+id/imageButtonup"
+        app:layout_constraintTop_toTopOf="@+id/imageButtonup" />
+
+    <ImageButton
+        android:id="@+id/playButtonBottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginStart="180dp"
+        android:src="@android:drawable/ic_media_play"
+        app:layout_constraintStart_toStartOf="@+id/imageButtondown"
+        app:layout_constraintTop_toTopOf="@+id/imageButtondown" />
+
+    <!-- Konfetti 객체 생성 -->
+
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone"
+        android:layout_marginBottom="80dp"
+        />
+
+    <nl.dionsegijn.konfetti.xml.KonfettiView
+        android:id="@+id/konfettiView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="-6dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
